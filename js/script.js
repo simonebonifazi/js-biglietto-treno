@@ -25,32 +25,37 @@ console.log("Distanza da percorrere:" + userDistance + " km");
 const userAge = parseInt(prompt("qual'è la Sua età?", "Inserisca qui la Sua età in numeri"));
 console.log("Età passeggero: " + userAge);
 
-// 4 ??
-
-//if (!isNaN(userDistance) && userDistance > 0) {}
-
 // 5
+let discountedPrice;
 
+// 6
 const ticketPrice = (userDistance * 0.21);
 console.log("Il costo del biglietto sarebbe di: " + ticketPrice);
 
-// 6
+// 4 
+if (!isNaN(userDistance) && (userDistance > 0) && (!isNaN(userAge) && (userAge > 0))) {
 
-let discountedPrice;
 
-if (userAge < 18) {
+    if (userAge < 18) {
 
-    discountedPrice = (ticketPrice - (ticketPrice * 0.2)).toFixed(2)
+        discountedPrice = (ticketPrice - (ticketPrice * 0.2)).toFixed(2)
 
+    }
+
+    else if (userAge > 65) {
+        discountedPrice = (ticketPrice - (ticketPrice * 0.4)).toFixed(2)
+    }
+
+    else {
+        discountedPrice = (ticketPrice).toFixed(2)
+    };
+
+
+} else {
+    alert("Errore. La distanza che vuoLe percorrere e la sua età devono essere espresse in numeri, maggiori di 0 ")
 }
 
-else if (userAge > 65) {
-    discountedPrice = (ticketPrice - (ticketPrice * 0.4)).toFixed(2)
-}
 
-else {
-    discountedPrice = (ticketPrice).toFixed(2)
-};
 
 console.log("Il costo del biglietto scontato è: " + discountedPrice);
 
