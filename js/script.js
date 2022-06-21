@@ -10,9 +10,9 @@ L'output del prezzo finale va stampato in pagina forma umana (con massimo due de
 1 - creo una const per contenere la risposta dell'utente ai kilometri da percorrere, la cambio in numero con parseInt e la verifico con console.log(variabile)
 2 - creo il prompt per ottenere la risposta dall'utente
 3 - creo una const per contenere la risposta dell' utente alla domanda sulla sua età, la cambio in numero con parseInt e verifico che tutto funzioni con console.log(..)
-4 - validazione dati inseriti!!
-5 - creo una const per contenere il calcolo del prezzo (0.21 * km)
-6 - creo una let per definire quali valori e quali sconti andrò ad applicare
+4 - creo una const per contenere il calcolo del prezzo (0.21 * km)
+5 - creo una let per definire quali valori e quali sconti andrò ad applicare
+6 - validazione dati inseriti!!
 7 - calcolo prezzo finale del biglietto   
 */
 
@@ -25,14 +25,14 @@ console.log("Distanza da percorrere:" + userDistance + " km");
 const userAge = parseInt(prompt("qual'è la Sua età?", "Inserisca qui la Sua età in numeri"));
 console.log("Età passeggero: " + userAge);
 
-// 5
+// 4
 let discountedPrice;
 
-// 6
+// 5
 const ticketPrice = (userDistance * 0.21);
 console.log("Il costo del biglietto sarebbe di: " + ticketPrice);
 
-// 4 
+// 6 
 if (!isNaN(userDistance) && (userDistance > 0) && (!isNaN(userAge) && (userAge > 0))) {
 
 
