@@ -16,3 +16,41 @@ L'output del prezzo finale va stampato in pagina forma umana (con massimo due de
 7 - calcolo prezzo finale del biglietto   
 */
 
+// 1 + 2
+const userDistance = parseInt(prompt("Quale distanza in km vuoLe percorrere?", "es. 100"));
+console.log("Distanza da percorrere:" + userDistance + " km");
+
+// 3
+
+const userAge = parseInt(prompt("qual'è la Sua età?", "Inserisca qui la sua età in numeri"));
+console.log("Età passeggero: " + userAge);
+
+// 4 next
+
+// 5
+
+const ticketPrice = (userDistance * 0.21);
+console.log("Il costo del biglietto sarebbe di: " + ticketPrice);
+
+// 6
+
+let discountedPrice;
+
+if (userAge < 18) {
+
+    discountedPrice = (ticketPrice - (ticketPrice * 0.2)).toFixed(2)
+
+}
+
+else if (userAge > 65) {
+    discountedPrice = (ticketPrice - (ticketPrice * 0.4)).toFixed(2)
+}
+
+else {
+    discountedPrice = ticketPrice
+};
+
+console.log("Il costo del biglietto scontato è: " + discountedPrice);
+
+
+document.getElementById("final-price").innerHTML = "Il costo per il Suo viaggio è di: €" + `${discountedPrice}`
